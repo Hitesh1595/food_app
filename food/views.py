@@ -7,3 +7,6 @@ from django.http import HttpResponse,Http404
 def index(request):
     return HttpResponse("welcome to index page")
     
+
+def item(request):
+    return HttpResponse("welcome to item view")
