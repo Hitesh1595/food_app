@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <h1>welcome to index page</h1>
+    {% for item in items %}
+    
+    <ul>
+        <li> <a href="{% url 'food:detail' item.pk%}" >{{item}}</a></li>
+    </ul>
+    {% endfor %}
+    
+</body>
+</html>
