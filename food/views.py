@@ -19,7 +19,7 @@ def index(request):
     context = {
         "items":items,
     }
-    print(context)
+    # print(context)
     return render(request,'food/index.html',context = context)
 
     # another way to load template

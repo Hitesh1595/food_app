@@ -1,17 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title></title>
-</head>
-<body>
-    <h1>welcome to index page</h1>
-    {% for item in items %}
+{% extends 'food/base.html'%}
+
+
+{% block content %}
+
+    {% include 'food/navbar.html' %}
     
-    <ul>
-        <li> <a href="{% url 'food:detail' item.pk%}" >{{item}}</a></li>
-    </ul>
-    {% endfor %}
+        <!-- <h1>welcome to index page</h1> -->
+        {% for item in items %}
+            <div class = "container text-center"></div>
+                <div class="row align-items-start ">
+                    <div class="col">
+                        <img  src={{item.item_image}} class="img-thumbnail" alt="not found">
+                    </div>
+                    <div class="col">
+                        <h3>{{item.item_name}}</h3><br>
+                        <h5>${{item.item_price}}</h5><br>
+                        <h6>{{item.item_desc}}</h6>
+                    </div>
+                    <div class="col">
+                        <a class="btn btn-primary" href="{% url 'food:detail' item.pk %}" role="button">Detail</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+
     
-</body>
-</html>
+
+{% endblock %}
