@@ -10,7 +10,7 @@
             <div class = "container text-center"></div>
                 <div class="row align-items-start ">
                     <div class="col">
-                        <img  src={{item.item_image}} class="img-thumbnail" alt="not found">
+                        <img  src={{item.item_image}} height="180px" alt="not found">
                     </div>
                     <div class="col">
                         <h3>{{item.item_name}}</h3><br>
@@ -19,6 +19,7 @@
                     </div>
                     <div class="col">
                         <a class="btn btn-primary" href="{% url 'food:detail' item.pk %}" role="button">Detail</a>
+                        <a class="btn btn-success" href="{% url 'food:update_item' item.pk %}" role="button">Update</a>
                     </div>
                 </div>
             </div>

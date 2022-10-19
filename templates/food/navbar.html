@@ -1,9 +1,9 @@
 <nav class="navbar navbar-dark bg-dark ">
     
-      <a class="navbar-brand" href="#">FoodApp</a>
+      <a class="navbar-brand" href="{% url 'food:index' %}">FoodApp</a>
       <ul class="nav justify-content-end">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Active</a>
+          <a class="nav-link active" aria-current="page" href="{% url 'food:create_item' %}">Add Item</a>
         </li>
         <li class="nav-item">
           <a class="nav-link active" href="#">Link</a>
