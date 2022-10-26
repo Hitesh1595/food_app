@@ -21,6 +21,10 @@ from food import views
 from django.contrib.auth import views as  auth_views
 from users import views as user_views
 
+# for static files
+from django.conf import settings
+from django.conf.urls.static import static
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -32,4 +36,10 @@ urlpatterns = [
     # logout
     path('logout/',auth_views.LogoutView.as_view(template_name = 'users/logout.html'),name = 'logout'),
     path('profile/',user_views.profilepage,name = 'profile')
-]
+
+    ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    
+    
+# urlpatterns += [
+#     # ... the rest of your URLconf goes here ...
+# ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

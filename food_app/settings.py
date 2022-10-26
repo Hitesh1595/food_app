@@ -128,6 +128,14 @@ STATIC_URL = '/static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+#NOTE
 
+# by default redirec t admin but this line add update default login url
 LOGIN_REDIRECT_URL = 'food:index'
+
+# by default page redirect to account/login but it will update
 LOGIN_URL = 'login'
+
+# default root set
+MEDIA_ROOT = BASE_DIR / 'pictures'
+MEDIA_URL = '/pictures/'

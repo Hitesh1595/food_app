@@ -27,6 +27,7 @@
                         <h3>{{item.item_name}}</h3><br>
                         <h5>${{item.item_price}}</h5><br>
                         <h6>{{item.item_desc}}</h6>
+                        <h6>Create by : {{item.user_name}}</h6>
                     </div>
                     <div class="col">
                         <a class="btn btn-primary" href="{% url 'food:detail' item.pk %}" role="button">Detail</a>
